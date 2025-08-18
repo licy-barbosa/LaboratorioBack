@@ -15,7 +15,7 @@ namespace LaboratorioBack.Controllers
 {
     [Route("api/pacientes")]
     [ApiController] //validaciones
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "isadmin")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PacientesController : Controller
     {
         private readonly ApplicationDbContex _context;

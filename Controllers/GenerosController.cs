@@ -12,7 +12,7 @@ namespace LaboratorioBack.Controllers
 {
     [Route("api/generos")]
     [ApiController] //validaciones
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "isadmin")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class GenerosController : Controller
     {
         public IMapper _mapper { get; }

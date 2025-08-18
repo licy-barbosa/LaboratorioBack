@@ -17,7 +17,7 @@ namespace LaboratorioBack.Controllers
 {
     [Route("api/users")]
     [ApiController] //validaciones
-   // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "isadmin")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "isadmin")]
     public class UsersController : ControllerBase
     {
         private readonly UserManager<IdentityUser> userManager;
