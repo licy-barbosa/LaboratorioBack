@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen();
 
 //inicio config identity 156
 builder.Services.AddIdentityCore<IdentityUser>()
-    .AddEntityFrameworkStores<ApplicationDbContex>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<UserManager<IdentityUser>>();
@@ -47,7 +47,7 @@ builder.Services.AddAuthorization(opciones =>
 //fin config identity 156
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-builder.Services.AddDbContext<ApplicationDbContex>(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(connectionString);
 });

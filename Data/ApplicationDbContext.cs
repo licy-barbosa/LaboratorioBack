@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace LaboratorioBack.Data
 {
     //public class ApplicationDbContex : DbContext
-    public class ApplicationDbContex : IdentityDbContext // para utilizar el sistema de ususarios de ASP.NET Identity
+    public class ApplicationDbContext : IdentityDbContext // para utilizar el sistema de ususarios de ASP.NET Identity
     {
-        protected ApplicationDbContex()
+        protected ApplicationDbContext()
         {
         }
 
-        public ApplicationDbContex(DbContextOptions options) : base(options)
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
 

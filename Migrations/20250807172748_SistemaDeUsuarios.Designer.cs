@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LaboratorioBack.Migrations
 {
-    [DbContext(typeof(ApplicationDbContex))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250807172748_SistemaDeUsuarios")]
     partial class SistemaDeUsuarios
     {

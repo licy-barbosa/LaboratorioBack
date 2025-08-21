@@ -16,9 +16,9 @@ namespace LaboratorioBack.Controllers
     public class GenerosController : Controller
     {
         public IMapper _mapper { get; }
-        private readonly ApplicationDbContex _context;
+        private readonly ApplicationDbContext _context;
 
-        public GenerosController(ApplicationDbContex _context, IMapper mapper) { 
+        public GenerosController(ApplicationDbContext _context, IMapper mapper) { 
             this._context = _context;
             this._mapper = mapper;
         }

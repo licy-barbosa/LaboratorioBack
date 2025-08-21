@@ -18,10 +18,10 @@ namespace LaboratorioBack.Controllers
     {
         public IMapper _mapper { get; }
         private const string cacheTag = "resultados";
-        private readonly ApplicationDbContex _context;
+        private readonly ApplicationDbContext _context;
         private readonly IOutputCacheStore outputCacheStore;
 
-        public EstudiosController(ApplicationDbContex _context, IOutputCacheStore outputCacheStore, IMapper mapper) { 
+        public EstudiosController(ApplicationDbContext _context, IOutputCacheStore outputCacheStore, IMapper mapper) { 
             this._context = _context;
             this.outputCacheStore = outputCacheStore;
             _mapper = mapper;

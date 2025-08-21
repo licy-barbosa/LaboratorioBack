@@ -23,14 +23,14 @@ namespace LaboratorioBack.Controllers
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly IConfiguration configuration;
-        private readonly ApplicationDbContex context;
+        private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
 
         public UsersController(
             UserManager<IdentityUser> userManager, 
             SignInManager<IdentityUser> signInManager, 
             IConfiguration configuration,
-            ApplicationDbContex _context,
+            ApplicationDbContext _context,
             IMapper mapper)
         {
             this.userManager = userManager;

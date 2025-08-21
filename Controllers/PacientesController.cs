@@ -18,13 +18,13 @@ namespace LaboratorioBack.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PacientesController : Controller
     {
-        private readonly ApplicationDbContex _context;
+        private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
         private readonly IOutputCacheStore outputCacheStore;
         private readonly IServiceUsers serviceUsers;
         private const string cacheTag = "pacientes";
 
-        public PacientesController(ApplicationDbContex _context, IMapper mapper, IOutputCacheStore outputCacheStore, IServiceUsers serviceUsers)
+        public PacientesController(ApplicationDbContext _context, IMapper mapper, IOutputCacheStore outputCacheStore, IServiceUsers serviceUsers)
         {
             this._context = _context;
             this._mapper = mapper;
